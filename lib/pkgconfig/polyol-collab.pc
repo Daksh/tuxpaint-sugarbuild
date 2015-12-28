@@ -1,0 +1,13 @@
+prefix=/home/test/Activities/tuxpaint.activity
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+datadir=${prefix}/share
+defsdir=${datadir}/sugar/defs
+
+Name: polyol-collab
+Description: What activity developers might need to code collab activities
+Version: 1.2
+Requires: polyol-env dbus-glib-1
+Libs: -L${libdir} -lpolyol-collab
+Cflags: -I${includedir}

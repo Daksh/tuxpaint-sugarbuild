@@ -1,0 +1,13 @@
+prefix=/home/test/Activities/tuxpaint.activity
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+datadir=${prefix}/share
+defsdir=${datadir}/sugar/defs
+
+Name: polyol-env
+Description: Access to various sugar environment settings
+Version: 1.2
+Requires: glib-2.0 >= 2.12 gobject-2.0 gconf-2.0 gee-1.0 >= 0.5 x11
+Libs: -L${libdir} -lpolyol-env
+Cflags: -I${includedir}

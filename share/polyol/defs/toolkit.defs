@@ -1,0 +1,583 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Activity
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarActivity")
+  (gtype-id "SUGAR_TYPE_ACTIVITY")
+)
+
+(define-object ActivityButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarActivityButton")
+  (gtype-id "SUGAR_TYPE_ACTIVITY_BUTTON")
+)
+
+(define-object ActivityToolbarButton
+  (in-module "Sugar")
+  (parent "SugarToolbarButton")
+  (c-name "SugarActivityToolbarButton")
+  (gtype-id "SUGAR_TYPE_ACTIVITY_TOOLBAR_BUTTON")
+)
+
+(define-interface Alert
+  (in-module "Sugar")
+  (c-name "SugarAlert")
+  (gtype-id "SUGAR_TYPE_ALERT")
+)
+
+(define-object AlertBin
+  (in-module "Sugar")
+  (parent "GtkEventBox")
+  (c-name "SugarAlertBin")
+  (gtype-id "SUGAR_TYPE_ALERT_BIN")
+)
+
+(define-object CopyButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarCopyButton")
+  (gtype-id "SUGAR_TYPE_COPY_BUTTON")
+)
+
+(define-object KeepButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarKeepButton")
+  (gtype-id "SUGAR_TYPE_KEEP_BUTTON")
+)
+
+(define-object MessageAlert
+  (in-module "Sugar")
+  (parent "GtkHBox")
+  (c-name "SugarMessageAlert")
+  (gtype-id "SUGAR_TYPE_MESSAGE_ALERT")
+)
+
+(define-object ConfirmationAlert
+  (in-module "Sugar")
+  (parent "SugarMessageAlert")
+  (c-name "SugarConfirmationAlert")
+  (gtype-id "SUGAR_TYPE_CONFIRMATION_ALERT")
+)
+
+(define-object NotifyAlert
+  (in-module "Sugar")
+  (parent "SugarMessageAlert")
+  (c-name "SugarNotifyAlert")
+  (gtype-id "SUGAR_TYPE_NOTIFY_ALERT")
+)
+
+(define-object PasteButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarPasteButton")
+  (gtype-id "SUGAR_TYPE_PASTE_BUTTON")
+)
+
+(define-object RedoButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarRedoButton")
+  (gtype-id "SUGAR_TYPE_REDO_BUTTON")
+)
+
+(define-object ShareButton
+  (in-module "Sugar")
+  (parent "SugarComboToolButton")
+  (c-name "SugarShareButton")
+  (gtype-id "SUGAR_TYPE_SHARE_BUTTON")
+)
+
+(define-object StopButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarStopButton")
+  (gtype-id "SUGAR_TYPE_STOP_BUTTON")
+)
+
+(define-object TimeoutAlert
+  (in-module "Sugar")
+  (parent "SugarMessageAlert")
+  (c-name "SugarTimeoutAlert")
+  (gtype-id "SUGAR_TYPE_TIMEOUT_ALERT")
+)
+
+(define-object TitleEntry
+  (in-module "Sugar")
+  (parent "GtkToolItem")
+  (c-name "SugarTitleEntry")
+  (gtype-id "SUGAR_TYPE_TITLE_ENTRY")
+)
+
+(define-object UndoButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarUndoButton")
+  (gtype-id "SUGAR_TYPE_UNDO_BUTTON")
+)
+
+;; Enumerations and flags ...
+
+
+;; From toolkit.h
+
+(define-function activity_button_get_type
+  (c-name "sugar_activity_button_get_type")
+  (return-type "GType")
+)
+
+(define-function activity_button_new
+  (c-name "sugar_activity_button_new")
+  (is-constructor-of "SugarActivityButton")
+  (return-type "SugarActivityButton*")
+  (parameters
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-function activity_button_construct
+  (c-name "sugar_activity_button_construct")
+  (return-type "SugarActivityButton*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-function activity_toolbar_button_get_type
+  (c-name "sugar_activity_toolbar_button_get_type")
+  (return-type "GType")
+)
+
+(define-function activity_get_type
+  (c-name "sugar_activity_get_type")
+  (return-type "GType")
+)
+
+(define-method toolbar_button_new
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_toolbar_button_new")
+  (return-type "SugarActivityToolbarButton*")
+)
+
+(define-function activity_toolbar_button_construct
+  (c-name "sugar_activity_toolbar_button_construct")
+  (return-type "SugarActivityToolbarButton*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarActivity*" "activity")
+  )
+)
+
+(define-function title_entry_get_type
+  (c-name "sugar_title_entry_get_type")
+  (return-type "GType")
+)
+
+(define-method get_title
+  (of-object "SugarActivityToolbarButton")
+  (c-name "sugar_activity_toolbar_button_get_title")
+  (return-type "SugarTitleEntry*")
+)
+
+(define-function keep_button_get_type
+  (c-name "sugar_keep_button_get_type")
+  (return-type "GType")
+)
+
+(define-method get_keep
+  (of-object "SugarActivityToolbarButton")
+  (c-name "sugar_activity_toolbar_button_get_keep")
+  (return-type "SugarKeepButton*")
+)
+
+(define-function stop_button_get_type
+  (c-name "sugar_stop_button_get_type")
+  (return-type "GType")
+)
+
+(define-function stop_button_new
+  (c-name "sugar_stop_button_new")
+  (is-constructor-of "SugarStopButton")
+  (return-type "SugarStopButton*")
+)
+
+(define-function stop_button_construct
+  (c-name "sugar_stop_button_construct")
+  (return-type "SugarStopButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function undo_button_get_type
+  (c-name "sugar_undo_button_get_type")
+  (return-type "GType")
+)
+
+(define-function undo_button_new
+  (c-name "sugar_undo_button_new")
+  (is-constructor-of "SugarUndoButton")
+  (return-type "SugarUndoButton*")
+)
+
+(define-function undo_button_construct
+  (c-name "sugar_undo_button_construct")
+  (return-type "SugarUndoButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function redo_button_get_type
+  (c-name "sugar_redo_button_get_type")
+  (return-type "GType")
+)
+
+(define-function redo_button_new
+  (c-name "sugar_redo_button_new")
+  (is-constructor-of "SugarRedoButton")
+  (return-type "SugarRedoButton*")
+)
+
+(define-function redo_button_construct
+  (c-name "sugar_redo_button_construct")
+  (return-type "SugarRedoButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function copy_button_get_type
+  (c-name "sugar_copy_button_get_type")
+  (return-type "GType")
+)
+
+(define-function copy_button_new
+  (c-name "sugar_copy_button_new")
+  (is-constructor-of "SugarCopyButton")
+  (return-type "SugarCopyButton*")
+)
+
+(define-function copy_button_construct
+  (c-name "sugar_copy_button_construct")
+  (return-type "SugarCopyButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function paste_button_get_type
+  (c-name "sugar_paste_button_get_type")
+  (return-type "GType")
+)
+
+(define-function paste_button_new
+  (c-name "sugar_paste_button_new")
+  (is-constructor-of "SugarPasteButton")
+  (return-type "SugarPasteButton*")
+)
+
+(define-function paste_button_construct
+  (c-name "sugar_paste_button_construct")
+  (return-type "SugarPasteButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function keep_button_new
+  (c-name "sugar_keep_button_new")
+  (is-constructor-of "SugarKeepButton")
+  (return-type "SugarKeepButton*")
+  (parameters
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-function keep_button_construct
+  (c-name "sugar_keep_button_construct")
+  (return-type "SugarKeepButton*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-function share_button_get_type
+  (c-name "sugar_share_button_get_type")
+  (return-type "GType")
+)
+
+(define-function share_button_new
+  (c-name "sugar_share_button_new")
+  (is-constructor-of "SugarShareButton")
+  (return-type "SugarShareButton*")
+  (parameters
+    '("SugarConnection*" "connection")
+  )
+)
+
+(define-function share_button_construct
+  (c-name "sugar_share_button_construct")
+  (return-type "SugarShareButton*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarConnection*" "connection")
+  )
+)
+
+(define-function title_entry_new
+  (c-name "sugar_title_entry_new")
+  (is-constructor-of "SugarTitleEntry")
+  (return-type "SugarTitleEntry*")
+  (parameters
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-function title_entry_construct
+  (c-name "sugar_title_entry_construct")
+  (return-type "SugarTitleEntry*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarJobject*" "jobject")
+  )
+)
+
+(define-method get_entry
+  (of-object "SugarTitleEntry")
+  (c-name "sugar_title_entry_get_entry")
+  (return-type "GtkEntry*")
+)
+
+(define-function alert_bin_get_type
+  (c-name "sugar_alert_bin_get_type")
+  (return-type "GType")
+)
+
+(define-function alert_get_type
+  (c-name "sugar_alert_get_type")
+  (return-type "GType")
+)
+
+
+
+(define-function alert_bin_new
+  (c-name "sugar_alert_bin_new")
+  (is-constructor-of "SugarAlertBin")
+  (return-type "SugarAlertBin*")
+)
+
+(define-function alert_bin_construct
+  (c-name "sugar_alert_bin_construct")
+  (return-type "SugarAlertBin*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function message_alert_get_type
+  (c-name "sugar_message_alert_get_type")
+  (return-type "GType")
+)
+
+(define-function message_alert_new
+  (c-name "sugar_message_alert_new")
+  (is-constructor-of "SugarMessageAlert")
+  (return-type "SugarMessageAlert*")
+  (parameters
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+  )
+)
+
+(define-function message_alert_construct
+  (c-name "sugar_message_alert_construct")
+  (return-type "SugarMessageAlert*")
+  (parameters
+    '("GType" "object_type")
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+  )
+)
+
+(define-method add_button
+  (of-object "SugarMessageAlert")
+  (c-name "sugar_message_alert_add_button")
+  (return-type "none")
+  (parameters
+    '("gint" "response_id")
+    '("const-char*" "label")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+    '("gint" "timeout")
+  )
+)
+
+(define-function confirmation_alert_get_type
+  (c-name "sugar_confirmation_alert_get_type")
+  (return-type "GType")
+)
+
+(define-function confirmation_alert_new
+  (c-name "sugar_confirmation_alert_new")
+  (is-constructor-of "SugarConfirmationAlert")
+  (return-type "SugarConfirmationAlert*")
+  (parameters
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+  )
+)
+
+(define-function confirmation_alert_construct
+  (c-name "sugar_confirmation_alert_construct")
+  (return-type "SugarConfirmationAlert*")
+  (parameters
+    '("GType" "object_type")
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+  )
+)
+
+(define-function timeout_alert_get_type
+  (c-name "sugar_timeout_alert_get_type")
+  (return-type "GType")
+)
+
+(define-function timeout_alert_new
+  (c-name "sugar_timeout_alert_new")
+  (is-constructor-of "SugarTimeoutAlert")
+  (return-type "SugarTimeoutAlert*")
+  (parameters
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+    '("gint" "timeout")
+  )
+)
+
+(define-function timeout_alert_construct
+  (c-name "sugar_timeout_alert_construct")
+  (return-type "SugarTimeoutAlert*")
+  (parameters
+    '("GType" "object_type")
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+    '("gint" "timeout")
+  )
+)
+
+(define-function notify_alert_get_type
+  (c-name "sugar_notify_alert_get_type")
+  (return-type "GType")
+)
+
+(define-function notify_alert_new
+  (c-name "sugar_notify_alert_new")
+  (is-constructor-of "SugarNotifyAlert")
+  (return-type "SugarNotifyAlert*")
+  (parameters
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+    '("gint" "timeout")
+  )
+)
+
+(define-function notify_alert_construct
+  (c-name "sugar_notify_alert_construct")
+  (return-type "SugarNotifyAlert*")
+  (parameters
+    '("GType" "object_type")
+    '("const-char*" "title_text")
+    '("const-char*" "message_text")
+    '("const-char*" "icon_name" (null-ok) (default "NULL"))
+    '("gint" "timeout")
+  )
+)
+
+(define-function activity_new
+  (c-name "sugar_activity_new")
+  (is-constructor-of "SugarActivity")
+  (return-type "SugarActivity*")
+  (parameters
+    '("gboolean" "use_journal")
+    '("gboolean" "use_sharing")
+  )
+)
+
+(define-function activity_construct
+  (c-name "sugar_activity_construct")
+  (return-type "SugarActivity*")
+  (parameters
+    '("GType" "object_type")
+    '("gboolean" "use_journal")
+    '("gboolean" "use_sharing")
+  )
+)
+
+(define-method write_file
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_write_file")
+  (return-type "none")
+  (parameters
+    '("const-char*" "file_path")
+    '("gboolean" "transfer_ownership")
+  )
+)
+
+(define-method get_jobject
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_get_jobject")
+  (return-type "SugarJobject*")
+)
+
+(define-method get_shell
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_get_shell")
+  (return-type "SugarShell*")
+)
+
+(define-method get_journal
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_get_journal")
+  (return-type "SugarJournal*")
+)
+
+(define-method get_connection
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_get_connection")
+  (return-type "SugarConnection*")
+)
+
+(define-method get_resumed
+  (of-object "SugarActivity")
+  (c-name "sugar_activity_get_resumed")
+  (return-type "gboolean")
+)
+
+
+;; -*- scheme -*-
+
+(define-function alert_bin_push
+  (c-name "sugar_alert_bin_push")
+  (return-type "none")
+  (parameters
+    '("SugarAlert*" "alert")
+  )
+)
+
+(define-function alert_bin_pop
+  (c-name "sugar_alert_bin_pop")
+  (return-type "none")
+  (parameters
+    '("SugarAlert*" "alert")
+  )
+)

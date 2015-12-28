@@ -1,0 +1,248 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Jobject
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarJobject")
+  (gtype-id "SUGAR_TYPE_JOBJECT")
+)
+
+;; Enumerations and flags ...
+
+
+;; From ds.h
+
+(define-function jobject_get_type
+  (c-name "sugar_jobject_get_type")
+  (return-type "GType")
+)
+
+(define-function jobject_create
+(caller-owns-return #t)
+  (c-name "sugar_jobject_create")
+  (return-type "SugarJobject*")
+)
+
+(define-function jobject_find
+(caller-owns-return #t)
+  (c-name "sugar_jobject_find")
+  (return-type "SugarJobject*")
+  (parameters
+    '("const-char*" "uid")
+  )
+)
+
+(define-method get_field
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_field")
+  (return-type "GValue*")
+  (parameters
+    '("const-char*" "field_name")
+  )
+)
+
+(define-method set_field
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_field")
+  (return-type "none")
+  (parameters
+    '("const-char*" "field_name")
+    '("GValue*" "field_value")
+  )
+)
+
+(define-method write
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_write")
+  (return-type "none")
+)
+
+(define-method write_file
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_write_file")
+  (return-type "none")
+  (parameters
+    '("const-char*" "file_path")
+    '("gboolean" "transfer_ownership")
+  )
+)
+
+(define-method cow
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_cow")
+  (return-type "none")
+)
+
+(define-method unlink
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_unlink")
+  (return-type "gboolean")
+)
+
+(define-method get_uid
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_uid")
+  (return-type "const-char*")
+)
+
+(define-method get_timestamp
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_timestamp")
+  (return-type "glong")
+)
+
+(define-method set_timestamp
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_timestamp")
+  (return-type "none")
+  (parameters
+    '("glong" "value")
+  )
+)
+
+(define-method get_title
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_title")
+  (return-type "const-char*")
+)
+
+(define-method set_title
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_title")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_title_set_by_user
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_title_set_by_user")
+  (return-type "gboolean")
+)
+
+(define-method set_title_set_by_user
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_title_set_by_user")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_mime_type
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_mime_type")
+  (return-type "const-char*")
+)
+
+(define-method set_mime_type
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_mime_type")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_share_scope
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_share_scope")
+  (return-type "SugarShareScope")
+)
+
+(define-method set_share_scope
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_share_scope")
+  (return-type "none")
+  (parameters
+    '("SugarShareScope" "value")
+  )
+)
+
+(define-method get_activity
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_activity")
+  (return-type "const-char*")
+)
+
+(define-method set_activity
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_activity")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_activity_id
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_activity_id")
+  (return-type "const-char*")
+)
+
+(define-method set_activity_id
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_activity_id")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_keep
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_keep")
+  (return-type "gboolean")
+)
+
+(define-method set_keep
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_keep")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_preview
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_preview")
+  (return-type "GArray*")
+)
+
+(define-method set_preview
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_preview")
+  (return-type "none")
+  (parameters
+    '("GArray*" "value")
+  )
+)
+
+(define-method get_icon_color
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_icon_color")
+  (return-type "none")
+  (parameters
+    '("SugarXoColor*" "result")
+  )
+)
+
+(define-method set_icon_color
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_set_icon_color")
+  (return-type "none")
+  (parameters
+    '("SugarXoColor*" "value")
+  )
+)
+
+(define-method get_file_path
+  (of-object "SugarJobject")
+  (c-name "sugar_jobject_get_file_path")
+  (return-type "const-char*")
+)
+
+
+;; -*- scheme -*-
