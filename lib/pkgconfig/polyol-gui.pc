@@ -1,0 +1,13 @@
+prefix=/home/ignacio/Activities/tuxpaint.activity
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+datadir=${prefix}/share
+defsdir=${datadir}/sugar/defs
+
+Name: polyol-gui
+Description: Basic GUI widgets to simplify process of activity creation
+Version: 1.2
+Requires: polyol-env gtk+-2.0 >= 2.12 pango >= 1.20 cairo librsvg-2.0
+Libs: -L${libdir} -lpolyol-gui
+Cflags: -I${includedir}

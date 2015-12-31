@@ -1,0 +1,3064 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Animator
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarAnimator")
+  (gtype-id "SUGAR_TYPE_ANIMATOR")
+)
+
+(define-object Connector
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarConnector")
+  (gtype-id "SUGAR_TYPE_CONNECTOR")
+)
+
+(define-object Container
+  (in-module "Sugar")
+  (parent "GtkContainer")
+  (c-name "SugarContainer")
+  (gtype-id "SUGAR_TYPE_CONTAINER")
+)
+
+(define-object Box
+  (in-module "Sugar")
+  (parent "SugarContainer")
+  (c-name "SugarBox")
+  (gtype-id "SUGAR_TYPE_BOX")
+)
+
+(define-object Bin
+  (in-module "Sugar")
+  (parent "SugarContainer")
+  (c-name "SugarBin")
+  (gtype-id "SUGAR_TYPE_BIN")
+)
+
+(define-object Alignment
+  (in-module "Sugar")
+  (parent "SugarBin")
+  (c-name "SugarAlignment")
+  (gtype-id "SUGAR_TYPE_ALIGNMENT")
+)
+
+(define-object EmbeddedMenu
+  (in-module "Sugar")
+  (parent "SugarBin")
+  (c-name "SugarEmbeddedMenu")
+  (gtype-id "SUGAR_TYPE_EMBEDDED_MENU")
+)
+
+(define-object EmbeddedSubMenu
+  (in-module "Sugar")
+  (parent "GtkMenu")
+  (c-name "SugarEmbeddedSubMenu")
+  (gtype-id "SUGAR_TYPE_EMBEDDED_SUB_MENU")
+)
+
+(define-object Entry
+  (in-module "Sugar")
+  (parent "GtkEntry")
+  (c-name "SugarEntry")
+  (gtype-id "SUGAR_TYPE_ENTRY")
+)
+
+(define-object HomogeneTable
+  (in-module "Sugar")
+  (parent "SugarContainer")
+  (c-name "SugarHomogeneTable")
+  (gtype-id "SUGAR_TYPE_HOMOGENE_TABLE")
+)
+
+(define-object Icon
+  (in-module "Sugar")
+  (parent "GtkImage")
+  (c-name "SugarIcon")
+  (gtype-id "SUGAR_TYPE_ICON")
+)
+
+(define-object Invoker
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarInvoker")
+  (gtype-id "SUGAR_TYPE_INVOKER")
+)
+
+(define-object Label
+  (in-module "Sugar")
+  (parent "GtkLabel")
+  (c-name "SugarLabel")
+  (gtype-id "SUGAR_TYPE_LABEL")
+)
+
+(define-object Menu
+  (in-module "Sugar")
+  (parent "SugarBox")
+  (c-name "SugarMenu")
+  (gtype-id "SUGAR_TYPE_MENU")
+)
+
+(define-object MenuContainer
+  (in-module "Sugar")
+  (c-name "SugarMenuContainer")
+  (gtype-id "SUGAR_TYPE_MENU_CONTAINER")
+)
+
+(define-object MouseSpeedDetector
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarMouseSpeedDetector")
+  (gtype-id "SUGAR_TYPE_MOUSE_SPEED_DETECTOR")
+)
+
+(define-object PaintBin
+  (in-module "Sugar")
+  (parent "SugarBin")
+  (c-name "SugarPaintBin")
+  (gtype-id "SUGAR_TYPE_PAINT_BIN")
+)
+
+(define-object MenuItem
+  (in-module "Sugar")
+  (parent "SugarPaintBin")
+  (c-name "SugarMenuItem")
+  (gtype-id "SUGAR_TYPE_MENU_ITEM")
+)
+
+(define-object PaletteGroup
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarPaletteGroup")
+  (gtype-id "SUGAR_TYPE_PALETTE_GROUP")
+)
+
+(define-object PaletteWindow
+  (in-module "Sugar")
+  (parent "GtkWindow")
+  (c-name "SugarPaletteWindow")
+  (gtype-id "SUGAR_TYPE_PALETTE_WINDOW")
+)
+
+(define-object Palette
+  (in-module "Sugar")
+  (parent "SugarPaletteWindow")
+  (c-name "SugarPalette")
+  (gtype-id "SUGAR_TYPE_PALETTE")
+)
+
+(define-object RadioToolButton
+  (in-module "Sugar")
+  (parent "GtkRadioToolButton")
+  (c-name "SugarRadioToolButton")
+  (gtype-id "SUGAR_TYPE_RADIO_TOOL_BUTTON")
+)
+
+(define-object Table
+  (in-module "Sugar")
+  (parent "SugarBox")
+  (c-name "SugarTable")
+  (gtype-id "SUGAR_TYPE_TABLE")
+)
+
+(define-object ToggleToolButton
+  (in-module "Sugar")
+  (parent "GtkToggleToolButton")
+  (c-name "SugarToggleToolButton")
+  (gtype-id "SUGAR_TYPE_TOGGLE_TOOL_BUTTON")
+)
+
+(define-object ToolButton
+  (in-module "Sugar")
+  (parent "GtkToolButton")
+  (c-name "SugarToolButton")
+  (gtype-id "SUGAR_TYPE_TOOL_BUTTON")
+)
+
+(define-object ComboToolButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarComboToolButton")
+  (gtype-id "SUGAR_TYPE_COMBO_TOOL_BUTTON")
+)
+
+(define-object ToolText
+  (in-module "Sugar")
+  (parent "GtkToolItem")
+  (c-name "SugarToolText")
+  (gtype-id "SUGAR_TYPE_TOOL_TEXT")
+)
+
+(define-object ToolbarBox
+  (in-module "Sugar")
+  (parent "GtkVBox")
+  (c-name "SugarToolbarBox")
+  (gtype-id "SUGAR_TYPE_TOOLBAR_BOX")
+)
+
+(define-object ToolbarButton
+  (in-module "Sugar")
+  (parent "SugarToolButton")
+  (c-name "SugarToolbarButton")
+  (gtype-id "SUGAR_TYPE_TOOLBAR_BUTTON")
+)
+
+(define-object Trigger
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarTrigger")
+  (gtype-id "SUGAR_TYPE_TRIGGER")
+)
+
+(define-object WidgetConnector
+  (in-module "Sugar")
+  (parent "SugarConnector")
+  (c-name "SugarWidgetConnector")
+  (gtype-id "SUGAR_TYPE_WIDGET_CONNECTOR")
+)
+
+(define-object ToolConnector
+  (in-module "Sugar")
+  (parent "SugarWidgetConnector")
+  (c-name "SugarToolConnector")
+  (gtype-id "SUGAR_TYPE_TOOL_CONNECTOR")
+)
+
+(define-object Window
+  (in-module "Sugar")
+  (parent "GtkWindow")
+  (c-name "SugarWindow")
+  (gtype-id "SUGAR_TYPE_WINDOW")
+)
+
+;; Enumerations and flags ...
+
+(define-enum AnimationType
+  (in-module "Sugar")
+  (c-name "SugarAnimationType")
+  (gtype-id "SUGAR_TYPE_ANIMATION_TYPE")
+  (values
+    '("out-expo" "SUGAR_ANIMATION_TYPE_OUT_EXPO")
+    '("in-expo" "SUGAR_ANIMATION_TYPE_IN_EXPO")
+  )
+)
+
+(define-enum PalettePosition
+  (in-module "Sugar")
+  (c-name "SugarPalettePosition")
+  (gtype-id "SUGAR_TYPE_PALETTE_POSITION")
+  (values
+    '("anchored" "SUGAR_PALETTE_POSITION_ANCHORED")
+    '("at-cursor" "SUGAR_PALETTE_POSITION_AT_CURSOR")
+  )
+)
+
+
+;; From gui.h
+
+(define-function range_get_type
+  (c-name "sugar_range_get_type")
+  (return-type "GType")
+)
+
+(define-method dup
+  (of-object "SugarRange")
+  (c-name "sugar_range_dup")
+  (return-type "SugarRange*")
+)
+
+(define-method free
+  (of-object "SugarRange")
+  (c-name "sugar_range_free")
+  (return-type "none")
+)
+
+(define-method init
+  (of-object "SugarRange")
+  (c-name "sugar_range_init")
+  (return-type "none")
+)
+
+(define-method contains
+  (of-object "SugarRange")
+  (c-name "sugar_range_contains")
+  (return-type "gboolean")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method is_equal
+  (of-object "SugarRange")
+  (c-name "sugar_range_is_equal")
+  (return-type "gboolean")
+  (parameters
+    '("SugarRange*" "other")
+  )
+)
+
+(define-method is_subset
+  (of-object "SugarRange")
+  (c-name "sugar_range_is_subset")
+  (return-type "gboolean")
+  (parameters
+    '("SugarRange*" "other")
+  )
+)
+
+(define-method get_last
+  (of-object "SugarRange")
+  (c-name "sugar_range_get_last")
+  (return-type "gint")
+)
+
+(define-method set_last
+  (of-object "SugarRange")
+  (c-name "sugar_range_set_last")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_size
+  (of-object "SugarRange")
+  (c-name "sugar_range_get_size")
+  (return-type "gint")
+)
+
+(define-method get_is_empty
+  (of-object "SugarRange")
+  (c-name "sugar_range_get_is_empty")
+  (return-type "gboolean")
+)
+
+(define-function timestamp_get_type
+  (c-name "sugar_timestamp_get_type")
+  (return-type "GType")
+)
+
+(define-method dup
+  (of-object "SugarTimestamp")
+  (c-name "sugar_timestamp_dup")
+  (return-type "SugarTimestamp*")
+)
+
+(define-method free
+  (of-object "SugarTimestamp")
+  (c-name "sugar_timestamp_free")
+  (return-type "none")
+)
+
+(define-method init
+  (of-object "SugarTimestamp")
+  (c-name "sugar_timestamp_init")
+  (return-type "none")
+)
+
+(define-method diff
+  (of-object "SugarTimestamp")
+  (c-name "sugar_timestamp_diff")
+  (return-type "double")
+  (parameters
+    '("SugarTimestamp*" "other")
+  )
+)
+
+(define-function to_string
+  (c-name "sugar_to_string")
+  (return-type "const-char*")
+  (parameters
+    '("gchar*" "str")
+  )
+)
+
+(define-function to_uchars
+  (c-name "sugar_to_uchars")
+  (return-type "guchar*")
+  (parameters
+    '("gchar*" "str")
+    '("int*" "result_length1")
+  )
+)
+
+(define-function trigger_get_type
+  (c-name "sugar_trigger_get_type")
+  (return-type "GType")
+)
+
+(define-function trigger_find_dock
+  (c-name "sugar_trigger_find_dock")
+  (return-type "SugarTrigger*")
+  (parameters
+    '("GType" "parent_type")
+    '("GtkWidget*" "parent")
+    '("const-char*" "prop_name")
+  )
+)
+
+(define-function trigger_new
+  (c-name "sugar_trigger_new")
+  (is-constructor-of "SugarTrigger")
+  (return-type "SugarTrigger*")
+)
+
+(define-function trigger_construct
+  (c-name "sugar_trigger_construct")
+  (return-type "SugarTrigger*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function color_type_to_rgb
+  (c-name "sugar_color_type_to_rgb")
+  (return-type "none")
+  (parameters
+    '("gint" "type")
+    '("GdkColor*" "result")
+  )
+)
+
+(define-method to_rgb
+  (of-object "SugarColor")
+  (c-name "sugar_color_to_rgb")
+  (return-type "none")
+  (parameters
+    '("GdkColor*" "result")
+  )
+)
+
+(define-function get_preview
+  (c-name "sugar_get_preview")
+  (return-type "GArray*")
+)
+
+(define-function container_get_type
+  (c-name "sugar_container_get_type")
+  (return-type "GType")
+)
+
+(define-method clear
+  (of-object "SugarContainer")
+  (c-name "sugar_container_clear")
+  (return-type "none")
+)
+
+(define-method get_pointer
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_pointer")
+  (return-type "none")
+  (parameters
+    '("gint*" "x")
+    '("gint*" "y")
+  )
+)
+
+(define-method child_size_request
+  (of-object "SugarContainer")
+  (c-name "sugar_container_child_size_request")
+  (return-type "none")
+  (parameters
+    '("GtkRequisition*" "req")
+  )
+)
+
+(define-function container_new
+  (c-name "sugar_container_new")
+  (is-constructor-of "SugarContainer")
+  (return-type "SugarContainer*")
+)
+
+(define-function container_construct
+  (c-name "sugar_container_construct")
+  (return-type "SugarContainer*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_border_left
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_border_left")
+  (return-type "gint")
+)
+
+(define-method set_border_left
+  (of-object "SugarContainer")
+  (c-name "sugar_container_set_border_left")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_border_right
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_border_right")
+  (return-type "gint")
+)
+
+(define-method set_border_right
+  (of-object "SugarContainer")
+  (c-name "sugar_container_set_border_right")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_border_top
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_border_top")
+  (return-type "gint")
+)
+
+(define-method set_border_top
+  (of-object "SugarContainer")
+  (c-name "sugar_container_set_border_top")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_border_bottom
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_border_bottom")
+  (return-type "gint")
+)
+
+(define-method set_border_bottom
+  (of-object "SugarContainer")
+  (c-name "sugar_container_set_border_bottom")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method set_border
+  (of-object "SugarContainer")
+  (c-name "sugar_container_set_border")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_child_x
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_child_x")
+  (return-type "gint")
+)
+
+(define-method get_child_y
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_child_y")
+  (return-type "gint")
+)
+
+(define-method get_child_width
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_child_width")
+  (return-type "gint")
+)
+
+(define-method get_child_height
+  (of-object "SugarContainer")
+  (c-name "sugar_container_get_child_height")
+  (return-type "gint")
+)
+
+(define-function box_get_type
+  (c-name "sugar_box_get_type")
+  (return-type "GType")
+)
+
+(define-function box_new
+  (c-name "sugar_box_new")
+  (is-constructor-of "SugarBox")
+  (return-type "SugarBox*")
+)
+
+(define-function box_construct
+  (c-name "sugar_box_construct")
+  (return-type "SugarBox*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_children_count
+  (of-object "SugarBox")
+  (c-name "sugar_box_get_children_count")
+  (return-type "gint")
+)
+
+(define-method insert
+  (of-object "SugarBox")
+  (c-name "sugar_box_insert")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "widget")
+    '("gint" "pos" (default "-1"))
+  )
+)
+
+(define-function bin_get_type
+  (c-name "sugar_bin_get_type")
+  (return-type "GType")
+)
+
+(define-function bin_new
+  (c-name "sugar_bin_new")
+  (is-constructor-of "SugarBin")
+  (return-type "SugarBin*")
+)
+
+(define-function bin_construct
+  (c-name "sugar_bin_construct")
+  (return-type "SugarBin*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_child
+  (of-object "SugarBin")
+  (c-name "sugar_bin_get_child")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_child
+  (of-object "SugarBin")
+  (c-name "sugar_bin_set_child")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "value")
+  )
+)
+
+(define-function paint_bin_get_type
+  (c-name "sugar_paint_bin_get_type")
+  (return-type "GType")
+)
+
+(define-function paint_bin_new
+  (c-name "sugar_paint_bin_new")
+  (is-constructor-of "SugarPaintBin")
+  (return-type "SugarPaintBin*")
+)
+
+(define-function paint_bin_construct
+  (c-name "sugar_paint_bin_construct")
+  (return-type "SugarPaintBin*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_draw_box
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_draw_box")
+  (return-type "gboolean")
+)
+
+(define-method set_draw_box
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_draw_box")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_radius
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_radius")
+  (return-type "gint")
+)
+
+(define-method set_radius
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_radius")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_padding_top
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_padding_top")
+  (return-type "gint")
+)
+
+(define-method set_padding_top
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_padding_top")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_padding_bottom
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_padding_bottom")
+  (return-type "gint")
+)
+
+(define-method set_padding_bottom
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_padding_bottom")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_padding_left
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_padding_left")
+  (return-type "gint")
+)
+
+(define-method set_padding_left
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_padding_left")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_padding_right
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_get_padding_right")
+  (return-type "gint")
+)
+
+(define-method set_padding_right
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_padding_right")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method set_padding
+  (of-object "SugarPaintBin")
+  (c-name "sugar_paint_bin_set_padding")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-function tool_text_get_type
+  (c-name "sugar_tool_text_get_type")
+  (return-type "GType")
+)
+
+(define-function tool_text_new
+  (c-name "sugar_tool_text_new")
+  (is-constructor-of "SugarToolText")
+  (return-type "SugarToolText*")
+)
+
+(define-function tool_text_construct
+  (c-name "sugar_tool_text_construct")
+  (return-type "SugarToolText*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_text
+  (of-object "SugarToolText")
+  (c-name "sugar_tool_text_get_text")
+  (return-type "const-char*")
+)
+
+(define-method set_text
+  (of-object "SugarToolText")
+  (c-name "sugar_tool_text_set_text")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-function homogene_table_get_type
+  (c-name "sugar_homogene_table_get_type")
+  (return-type "GType")
+)
+
+(define-method new_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_new_cell")
+  (return-type "GtkWidget*")
+)
+
+(define-method fill_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_fill_cell")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "cell")
+    '("gint" "index")
+  )
+)
+
+(define-method highlight_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_highlight_cell")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "cell")
+    '("gboolean" "selected")
+  )
+)
+
+(define-method get_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_cell")
+  (return-type "GtkWidget*")
+  (parameters
+    '("gint" "cell_index")
+  )
+)
+
+(define-method get_index_at_pos
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_index_at_pos")
+  (return-type "gint")
+  (parameters
+    '("gint" "x")
+    '("gint" "y")
+  )
+)
+
+(define-method scroll_to_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_scroll_to_cell")
+  (return-type "none")
+  (parameters
+    '("gint" "cell_index")
+    '("gboolean" "fully_visible")
+  )
+)
+
+(define-method refill
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_refill")
+  (return-type "none")
+)
+
+(define-function homogene_table_construct
+  (c-name "sugar_homogene_table_construct")
+  (return-type "SugarHomogeneTable*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_cell_count
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_cell_count")
+  (return-type "gint")
+)
+
+(define-method set_cell_count
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_cell_count")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_frame_width
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_frame_width")
+  (return-type "gint")
+)
+
+(define-method set_frame_width
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_frame_width")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_frame_height
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_frame_height")
+  (return-type "gint")
+)
+
+(define-method set_frame_height
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_frame_height")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_cell_width
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_cell_width")
+  (return-type "gint")
+)
+
+(define-method set_cell_width
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_cell_width")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_cell_height
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_cell_height")
+  (return-type "gint")
+)
+
+(define-method set_cell_height
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_cell_height")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_orientation
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_orientation")
+  (return-type "GtkOrientation")
+)
+
+(define-method set_orientation
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_orientation")
+  (return-type "none")
+  (parameters
+    '("GtkOrientation" "value")
+  )
+)
+
+(define-method get_hover_selection
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_hover_selection")
+  (return-type "gboolean")
+)
+
+(define-method set_hover_selection
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_hover_selection")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_cursor
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_cursor")
+  (return-type "gint")
+)
+
+(define-method set_cursor
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_cursor")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_focus_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_focus_cell")
+  (return-type "gboolean")
+)
+
+(define-method set_focus_cell
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_focus_cell")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_frame_range
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_frame_range")
+  (return-type "none")
+  (parameters
+    '("SugarRange*" "result")
+  )
+)
+
+(define-method set_frame_range
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_set_frame_range")
+  (return-type "none")
+  (parameters
+    '("SugarRange*" "value")
+  )
+)
+
+(define-method get_is_empty
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_get_is_empty")
+  (return-type "gboolean")
+)
+
+(define-method signal_set_scroll_adjustments
+  (of-object "SugarHomogeneTable")
+  (c-name "sugar_homogene_table_signal_set_scroll_adjustments")
+  (return-type "none")
+  (parameters
+    '("GtkAdjustment*" "hadjustment")
+    '("GtkAdjustment*" "vadjustment")
+  )
+)
+
+(define-function tool_button_get_type
+  (c-name "sugar_tool_button_get_type")
+  (return-type "GType")
+)
+
+(define-function toolbar_button_get_type
+  (c-name "sugar_toolbar_button_get_type")
+  (return-type "GType")
+)
+
+(define-function toolbar_button_new
+  (c-name "sugar_toolbar_button_new")
+  (is-constructor-of "SugarToolbarButton")
+  (return-type "SugarToolbarButton*")
+)
+
+(define-function toolbar_button_construct
+  (c-name "sugar_toolbar_button_construct")
+  (return-type "SugarToolbarButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_page
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_get_page")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_page
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_set_page")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "value")
+  )
+)
+
+(define-method get_popped
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_get_popped")
+  (return-type "gboolean")
+)
+
+(define-method set_popped
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_set_popped")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_expanded
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_get_expanded")
+  (return-type "gboolean")
+)
+
+(define-method set_expanded
+  (of-object "SugarToolbarButton")
+  (c-name "sugar_toolbar_button_set_expanded")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-function toolbar_box_get_type
+  (c-name "sugar_toolbar_box_get_type")
+  (return-type "GType")
+)
+
+(define-method expand_button
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_expand_button")
+  (return-type "none")
+  (parameters
+    '("SugarToolbarButton*" "button")
+  )
+)
+
+(define-method shrink_button
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_shrink_button")
+  (return-type "none")
+  (parameters
+    '("SugarToolbarButton*" "button")
+  )
+)
+
+(define-function toolbar_box_new
+  (c-name "sugar_toolbar_box_new")
+  (is-constructor-of "SugarToolbarBox")
+  (return-type "SugarToolbarBox*")
+)
+
+(define-function toolbar_box_construct
+  (c-name "sugar_toolbar_box_construct")
+  (return-type "SugarToolbarBox*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function _toolbarexpander_get_type
+  (c-name "sugar__toolbarexpander_get_type")
+  (return-type "GType")
+)
+
+(define-method get_toolbar
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_get_toolbar")
+  (return-type "Sugar_ToolbarExpander*")
+)
+
+(define-method get_orientation
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_get_orientation")
+  (return-type "GtkPositionType")
+)
+
+(define-method set_orientation
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_set_orientation")
+  (return-type "none")
+  (parameters
+    '("GtkPositionType" "value")
+  )
+)
+
+(define-method get_padding
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_get_padding")
+  (return-type "gint")
+)
+
+(define-method set_padding
+  (of-object "SugarToolbarBox")
+  (c-name "sugar_toolbar_box_set_padding")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-function _toolbarexpander_new
+  (c-name "sugar__toolbarexpander_new")
+  (is-constructor-of "SugarToolbarexpander")
+  (return-type "Sugar_ToolbarExpander*")
+)
+
+(define-function _toolbarexpander_construct
+  (c-name "sugar__toolbarexpander_construct")
+  (return-type "Sugar_ToolbarExpander*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function _toolbarexpander_get_toolbox
+  (c-name "sugar__toolbarexpander_get_toolbox")
+  (return-type "SugarToolbarBox*")
+  (parameters
+    '("Sugar_ToolbarExpander*" "self")
+  )
+)
+
+(define-function animation_type_get_type
+  (c-name "sugar_animation_type_get_type")
+  (return-type "GType")
+)
+
+(define-function animator_get_type
+  (c-name "sugar_animator_get_type")
+  (return-type "GType")
+)
+
+(define-function animator_new
+  (c-name "sugar_animator_new")
+  (is-constructor-of "SugarAnimator")
+  (return-type "SugarAnimator*")
+  (parameters
+    '("double" "duration")
+    '("gint" "fps")
+    '("double" "start")
+    '("double" "stop")
+    '("SugarAnimationType" "type")
+  )
+)
+
+(define-function animator_construct
+  (c-name "sugar_animator_construct")
+  (return-type "SugarAnimator*")
+  (parameters
+    '("GType" "object_type")
+    '("double" "duration")
+    '("gint" "fps")
+    '("double" "start")
+    '("double" "stop")
+    '("SugarAnimationType" "type")
+  )
+)
+
+(define-method start
+  (of-object "SugarAnimator")
+  (c-name "sugar_animator_start")
+  (return-type "none")
+)
+
+(define-method abort
+  (of-object "SugarAnimator")
+  (c-name "sugar_animator_abort")
+  (return-type "none")
+)
+
+(define-method get_active
+  (of-object "SugarAnimator")
+  (c-name "sugar_animator_get_active")
+  (return-type "gboolean")
+)
+
+(define-function mouse_speed_detector_get_type
+  (c-name "sugar_mouse_speed_detector_get_type")
+  (return-type "GType")
+)
+
+(define-function mouse_speed_detector_new
+  (c-name "sugar_mouse_speed_detector_new")
+  (is-constructor-of "SugarMouseSpeedDetector")
+  (return-type "SugarMouseSpeedDetector*")
+  (parameters
+    '("gint" "delay")
+    '("gint" "threshold")
+  )
+)
+
+(define-function mouse_speed_detector_construct
+  (c-name "sugar_mouse_speed_detector_construct")
+  (return-type "SugarMouseSpeedDetector*")
+  (parameters
+    '("GType" "object_type")
+    '("gint" "delay")
+    '("gint" "threshold")
+  )
+)
+
+(define-method start
+  (of-object "SugarMouseSpeedDetector")
+  (c-name "sugar_mouse_speed_detector_start")
+  (return-type "none")
+)
+
+(define-method stop
+  (of-object "SugarMouseSpeedDetector")
+  (c-name "sugar_mouse_speed_detector_stop")
+  (return-type "none")
+)
+
+(define-function palette_group_get_type
+  (c-name "sugar_palette_group_get_type")
+  (return-type "GType")
+)
+
+(define-function palette_groups_get
+(caller-owns-return #t)
+  (c-name "sugar_palette_groups_get")
+  (return-type "SugarPaletteGroup*")
+  (parameters
+    '("const-char*" "group_id" (default "default"))
+  )
+)
+
+(define-function palette_groups_popdown_all
+  (c-name "sugar_palette_groups_popdown_all")
+  (return-type "none")
+)
+
+(define-function invoker_get_type
+  (c-name "sugar_invoker_get_type")
+  (return-type "GType")
+)
+
+(define-method add
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_add")
+  (return-type "none")
+  (parameters
+    '("SugarInvoker*" "invoker")
+  )
+)
+
+(define-method remove
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_remove")
+  (return-type "none")
+  (parameters
+    '("SugarInvoker*" "invoker")
+  )
+)
+
+(define-method popdown
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_popdown")
+  (return-type "none")
+)
+
+(define-method get_parent
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_get_parent")
+  (return-type "SugarInvoker*")
+  (parameters
+    '("SugarInvoker*" "child")
+  )
+)
+
+(define-function palette_group_new
+  (c-name "sugar_palette_group_new")
+  (is-constructor-of "SugarPaletteGroup")
+  (return-type "SugarPaletteGroup*")
+)
+
+(define-function palette_group_construct
+  (c-name "sugar_palette_group_construct")
+  (return-type "SugarPaletteGroup*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_id
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_get_id")
+  (return-type "const-char*")
+)
+
+(define-method set_id
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_set_id")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_is_up
+  (of-object "SugarPaletteGroup")
+  (c-name "sugar_palette_group_get_is_up")
+  (return-type "gboolean")
+)
+
+(define-function connector_get_type
+  (c-name "sugar_connector_get_type")
+  (return-type "GType")
+)
+
+(define-function invoker_new
+  (c-name "sugar_invoker_new")
+  (is-constructor-of "SugarInvoker")
+  (return-type "SugarInvoker*")
+  (parameters
+    '("SugarConnector*" "connector")
+    '("const-char*" "group_id" (default "default"))
+  )
+)
+
+(define-function invoker_construct
+  (c-name "sugar_invoker_construct")
+  (return-type "SugarInvoker*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarConnector*" "connector")
+    '("const-char*" "group_id" (default "default"))
+  )
+)
+
+(define-method popup
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_popup")
+  (return-type "none")
+)
+
+(define-method popdown
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_popdown")
+  (return-type "none")
+)
+
+(define-method get_connector
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_connector")
+  (return-type "SugarConnector*")
+)
+
+(define-method set_connector
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_set_connector")
+  (return-type "none")
+  (parameters
+    '("SugarConnector*" "value")
+  )
+)
+
+(define-method get_group_id
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_group_id")
+  (return-type "const-char*")
+)
+
+(define-method set_group_id
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_set_group_id")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-function palette_window_get_type
+  (c-name "sugar_palette_window_get_type")
+  (return-type "GType")
+)
+
+(define-method get_palette_window
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_palette_window")
+  (return-type "SugarPaletteWindow*")
+)
+
+(define-method set_palette_window
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_set_palette_window")
+  (return-type "none")
+  (parameters
+    '("SugarPaletteWindow*" "value")
+  )
+)
+
+(define-function palette_get_type
+  (c-name "sugar_palette_get_type")
+  (return-type "GType")
+)
+
+(define-method get_palette
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_palette")
+  (return-type "SugarPalette*")
+)
+
+(define-method set_palette
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_set_palette")
+  (return-type "none")
+  (parameters
+    '("SugarPalette*" "value")
+  )
+)
+
+(define-method get_is_up
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_is_up")
+  (return-type "gboolean")
+)
+
+(define-method get_focused
+  (of-object "SugarInvoker")
+  (c-name "sugar_invoker_get_focused")
+  (return-type "gboolean")
+)
+
+(define-method get_rect
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_get_rect")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "result")
+  )
+)
+
+(define-method reveal
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_reveal")
+  (return-type "none")
+)
+
+(define-function palette_window_new
+  (c-name "sugar_palette_window_new")
+  (is-constructor-of "SugarPaletteWindow")
+  (return-type "SugarPaletteWindow*")
+)
+
+(define-function palette_window_construct
+  (c-name "sugar_palette_window_construct")
+  (return-type "SugarPaletteWindow*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_connector
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_get_connector")
+  (return-type "SugarConnector*")
+)
+
+(define-method set_connector
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_set_connector")
+  (return-type "none")
+  (parameters
+    '("SugarConnector*" "value")
+  )
+)
+
+(define-method get_secondary
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_get_secondary")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_secondary
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_set_secondary")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "value")
+  )
+)
+
+(define-method get_secondary_visible
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_get_secondary_visible")
+  (return-type "gboolean")
+)
+
+(define-method set_secondary_visible
+  (of-object "SugarPaletteWindow")
+  (c-name "sugar_palette_window_set_secondary_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-function icon_get_type
+  (c-name "sugar_icon_get_type")
+  (return-type "GType")
+)
+
+(define-function icon_new
+  (c-name "sugar_icon_new")
+  (is-constructor-of "SugarIcon")
+  (return-type "SugarIcon*")
+)
+
+(define-function icon_construct
+  (c-name "sugar_icon_construct")
+  (return-type "SugarIcon*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_file
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_file")
+  (return-type "const-char*")
+)
+
+(define-method set_file
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_file")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_fill_color
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_fill_color")
+  (return-type "none")
+  (parameters
+    '("SugarColor*" "result")
+  )
+)
+
+(define-method set_fill_color
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_fill_color")
+  (return-type "none")
+  (parameters
+    '("SugarColor*" "value")
+  )
+)
+
+(define-method get_stroke_color
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_stroke_color")
+  (return-type "none")
+  (parameters
+    '("SugarColor*" "result")
+  )
+)
+
+(define-method set_stroke_color
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_stroke_color")
+  (return-type "none")
+  (parameters
+    '("SugarColor*" "value")
+  )
+)
+
+(define-method set_xo_color
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_xo_color")
+  (return-type "none")
+  (parameters
+    '("SugarXoColor*" "value")
+  )
+)
+
+(define-method get_width
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_width")
+  (return-type "gint")
+)
+
+(define-method get_height
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_height")
+  (return-type "gint")
+)
+
+(define-method set_pixel_size
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_pixel_size")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method set_icon_size
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_icon_size")
+  (return-type "none")
+  (parameters
+    '("GtkIconSize" "value")
+  )
+)
+
+(define-method get_pulsing
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_get_pulsing")
+  (return-type "gboolean")
+)
+
+(define-method set_pulsing
+  (of-object "SugarIcon")
+  (c-name "sugar_icon_set_pulsing")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-function icon_attr_get_type
+  (c-name "sugar_icon_attr_get_type")
+  (return-type "GType")
+)
+
+(define-method dup
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_dup")
+  (return-type "SugarIconAttr*")
+)
+
+(define-method free
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_free")
+  (return-type "none")
+)
+
+(define-method copy
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_copy")
+  (return-type "none")
+  (parameters
+    '("SugarIconAttr*" "dest")
+  )
+)
+
+(define-method destroy
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_destroy")
+  (return-type "none")
+)
+
+(define-method hash
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_hash")
+  (return-type "guint")
+)
+
+(define-method cmp
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_cmp")
+  (return-type "gboolean")
+  (parameters
+    '("SugarIconAttr*" "y")
+  )
+)
+
+(define-method set_xo_color
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_set_xo_color")
+  (return-type "none")
+  (parameters
+    '("SugarXoColor*" "value")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_icon_size
+  (of-object "SugarIconAttr")
+  (c-name "sugar_icon_attr_set_icon_size")
+  (return-type "none")
+  (parameters
+    '("GtkIconSize" "value")
+  )
+)
+
+(define-function icon_cache_reset
+  (c-name "sugar_icon_cache_reset")
+  (return-type "none")
+)
+
+(define-function icon_get_surface
+  (c-name "sugar_icon_get_surface")
+  (return-type "cairo_surface_t*")
+  (parameters
+    '("SugarIconAttr*" "attr")
+    '("gboolean" "cache")
+  )
+)
+
+(define-function icon_get_pixbuf
+(caller-owns-return #t)
+  (c-name "sugar_icon_get_pixbuf")
+  (return-type "GdkPixbuf*")
+  (parameters
+    '("SugarIconAttr*" "attr")
+  )
+)
+
+(define-function menu_container_get_type
+  (c-name "sugar_menu_container_get_type")
+  (return-type "GType")
+)
+
+(define-function palette_new
+  (c-name "sugar_palette_new")
+  (is-constructor-of "SugarPalette")
+  (return-type "SugarPalette*")
+)
+
+(define-function palette_construct
+  (c-name "sugar_palette_construct")
+  (return-type "SugarPalette*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_primary_text
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_get_primary_text")
+  (return-type "const-char*")
+)
+
+(define-method set_primary_text
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_set_primary_text")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_secondary_text
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_get_secondary_text")
+  (return-type "const-char*")
+)
+
+(define-method set_secondary_text
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_set_secondary_text")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_text_maxlen
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_set_text_maxlen")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_icon
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_get_icon")
+  (return-type "SugarIcon*")
+)
+
+(define-method set_icon
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_set_icon")
+  (return-type "none")
+  (parameters
+    '("SugarIcon*" "value")
+  )
+)
+
+(define-method get_icon_visible
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_get_icon_visible")
+  (return-type "gboolean")
+)
+
+(define-method set_icon_visible
+  (of-object "SugarPalette")
+  (c-name "sugar_palette_set_icon_visible")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-function palette_position_get_type
+  (c-name "sugar_palette_position_get_type")
+  (return-type "GType")
+)
+
+(define-function connector_alignment_get_type
+  (c-name "sugar_connector_alignment_get_type")
+  (return-type "GType")
+)
+
+(define-method dup
+  (of-object "SugarConnectorAlignment")
+  (c-name "sugar_connector_alignment_dup")
+  (return-type "SugarConnectorAlignment*")
+)
+
+(define-method free
+  (of-object "SugarConnectorAlignment")
+  (c-name "sugar_connector_alignment_free")
+  (return-type "none")
+)
+
+(define-function connector_get_box_gap
+  (c-name "sugar_connector_get_box_gap")
+  (return-type "gboolean")
+  (parameters
+    '("GdkRectangle*" "a")
+    '("GdkRectangle*" "b")
+    '("GtkPositionType*" "gap_side")
+    '("gint*" "gap_start")
+    '("gint*" "gap_size")
+  )
+)
+
+(define-method get_palette_pos
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_palette_pos")
+  (return-type "none")
+  (parameters
+    '("GtkRequisition*" "palette_size")
+    '("gint*" "x")
+    '("gint*" "y")
+  )
+)
+
+(define-method on_popup
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_on_popup")
+  (return-type "none")
+)
+
+(define-method on_popdown
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_on_popdown")
+  (return-type "none")
+)
+
+(define-method draw_rectangle
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_draw_rectangle")
+  (return-type "none")
+  (parameters
+    '("GdkEventExpose*" "event")
+    '("SugarPaletteWindow*" "palette")
+  )
+)
+
+(define-method get_toplevel
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_toplevel")
+  (return-type "GtkWindow*")
+)
+
+(define-method get_rect
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_rect")
+  (return-type "none")
+  (parameters
+    '("GdkRectangle*" "result")
+  )
+)
+
+(define-method get_alignments
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_alignments")
+  (return-type "SugarConnectorAlignment*")
+  (parameters
+    '("int*" "result_length1")
+  )
+)
+
+(define-function connector_construct
+  (c-name "sugar_connector_construct")
+  (return-type "SugarConnector*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_subject
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_subject")
+  (return-type "GObject*")
+)
+
+(define-method set_subject
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_set_subject")
+  (return-type "none")
+  (parameters
+    '("GObject*" "value")
+  )
+)
+
+(define-method get_palette_position
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_get_palette_position")
+  (return-type "SugarPalettePosition")
+)
+
+(define-method set_palette_position
+  (of-object "SugarConnector")
+  (c-name "sugar_connector_set_palette_position")
+  (return-type "none")
+  (parameters
+    '("SugarPalettePosition" "value")
+  )
+)
+
+(define-function widget_connector_get_type
+  (c-name "sugar_widget_connector_get_type")
+  (return-type "GType")
+)
+
+(define-function widget_connector_new
+  (c-name "sugar_widget_connector_new")
+  (is-constructor-of "SugarWidgetConnector")
+  (return-type "SugarWidgetConnector*")
+  (parameters
+    '("GtkWidget*" "widget")
+  )
+)
+
+(define-function widget_connector_construct
+  (c-name "sugar_widget_connector_construct")
+  (return-type "SugarWidgetConnector*")
+  (parameters
+    '("GType" "object_type")
+    '("GtkWidget*" "widget")
+  )
+)
+
+(define-method get_widget
+  (of-object "SugarWidgetConnector")
+  (c-name "sugar_widget_connector_get_widget")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_widget
+  (of-object "SugarWidgetConnector")
+  (c-name "sugar_widget_connector_set_widget")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "value")
+  )
+)
+
+(define-function tool_connector_get_type
+  (c-name "sugar_tool_connector_get_type")
+  (return-type "GType")
+)
+
+(define-function tool_connector_new
+  (c-name "sugar_tool_connector_new")
+  (is-constructor-of "SugarToolConnector")
+  (return-type "SugarToolConnector*")
+  (parameters
+    '("GtkToolItem*" "tool_item")
+  )
+)
+
+(define-function tool_connector_construct
+  (c-name "sugar_tool_connector_construct")
+  (return-type "SugarToolConnector*")
+  (parameters
+    '("GType" "object_type")
+    '("GtkToolItem*" "tool_item")
+  )
+)
+
+(define-method get_tool_item
+  (of-object "SugarToolConnector")
+  (c-name "sugar_tool_connector_get_tool_item")
+  (return-type "GtkToolItem*")
+)
+
+(define-method set_tool_item
+  (of-object "SugarToolConnector")
+  (c-name "sugar_tool_connector_set_tool_item")
+  (return-type "none")
+  (parameters
+    '("GtkToolItem*" "value")
+  )
+)
+
+(define-function tool_button_new
+  (c-name "sugar_tool_button_new")
+  (is-constructor-of "SugarToolButton")
+  (return-type "SugarToolButton*")
+)
+
+(define-function tool_button_construct
+  (c-name "sugar_tool_button_construct")
+  (return-type "SugarToolButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_invoker
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_get_invoker")
+  (return-type "SugarInvoker*")
+)
+
+(define-method get_tooltip
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_get_tooltip")
+  (return-type "const-char*")
+)
+
+(define-method set_tooltip
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_set_tooltip")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_accelerator
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_get_accelerator")
+  (return-type "const-char*")
+)
+
+(define-method set_accelerator
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_set_accelerator")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_icon
+  (of-object "SugarToolButton")
+  (c-name "sugar_tool_button_get_icon")
+  (return-type "SugarIcon*")
+)
+
+(define-function combo_tool_button_get_type
+  (c-name "sugar_combo_tool_button_get_type")
+  (return-type "GType")
+)
+
+(define-function combo_tool_button_new
+  (c-name "sugar_combo_tool_button_new")
+  (is-constructor-of "SugarComboToolButton")
+  (return-type "SugarComboToolButton*")
+)
+
+(define-function combo_tool_button_construct
+  (c-name "sugar_combo_tool_button_construct")
+  (return-type "SugarComboToolButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_action
+  (of-object "SugarComboToolButton")
+  (c-name "sugar_combo_tool_button_get_action")
+  (return-type "GtkRadioAction*")
+)
+
+(define-method set_action
+  (of-object "SugarComboToolButton")
+  (c-name "sugar_combo_tool_button_set_action")
+  (return-type "none")
+  (parameters
+    '("GtkRadioAction*" "value")
+  )
+)
+
+(define-function toggle_tool_button_get_type
+  (c-name "sugar_toggle_tool_button_get_type")
+  (return-type "GType")
+)
+
+(define-function toggle_tool_button_new
+  (c-name "sugar_toggle_tool_button_new")
+  (is-constructor-of "SugarToggleToolButton")
+  (return-type "SugarToggleToolButton*")
+)
+
+(define-function toggle_tool_button_construct
+  (c-name "sugar_toggle_tool_button_construct")
+  (return-type "SugarToggleToolButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_invoker
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_get_invoker")
+  (return-type "SugarInvoker*")
+)
+
+(define-method get_tooltip
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_get_tooltip")
+  (return-type "const-char*")
+)
+
+(define-method set_tooltip
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_set_tooltip")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_accelerator
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_get_accelerator")
+  (return-type "const-char*")
+)
+
+(define-method set_accelerator
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_set_accelerator")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_icon
+  (of-object "SugarToggleToolButton")
+  (c-name "sugar_toggle_tool_button_get_icon")
+  (return-type "SugarIcon*")
+)
+
+(define-function radio_tool_button_get_type
+  (c-name "sugar_radio_tool_button_get_type")
+  (return-type "GType")
+)
+
+(define-function radio_tool_button_new
+  (c-name "sugar_radio_tool_button_new")
+  (is-constructor-of "SugarRadioToolButton")
+  (return-type "SugarRadioToolButton*")
+)
+
+(define-function radio_tool_button_construct
+  (c-name "sugar_radio_tool_button_construct")
+  (return-type "SugarRadioToolButton*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_invoker
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_get_invoker")
+  (return-type "SugarInvoker*")
+)
+
+(define-method get_tooltip
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_get_tooltip")
+  (return-type "const-char*")
+)
+
+(define-method set_tooltip
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_set_tooltip")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_accelerator
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_get_accelerator")
+  (return-type "const-char*")
+)
+
+(define-method set_accelerator
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_set_accelerator")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_icon_name
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_icon
+  (of-object "SugarRadioToolButton")
+  (c-name "sugar_radio_tool_button_get_icon")
+  (return-type "SugarIcon*")
+)
+
+(define-function entry_get_type
+  (c-name "sugar_entry_get_type")
+  (return-type "GType")
+)
+
+(define-function entry_new
+  (c-name "sugar_entry_new")
+  (is-constructor-of "SugarEntry")
+  (return-type "SugarEntry*")
+)
+
+(define-function entry_construct
+  (c-name "sugar_entry_construct")
+  (return-type "SugarEntry*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_primary_icon
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_get_primary_icon")
+  (return-type "const-char*")
+)
+
+(define-method set_primary_icon
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_set_primary_icon")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_secondary_icon
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_get_secondary_icon")
+  (return-type "const-char*")
+)
+
+(define-method set_secondary_icon
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_set_secondary_icon")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_has_clear_button
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_get_has_clear_button")
+  (return-type "gboolean")
+)
+
+(define-method set_has_clear_button
+  (of-object "SugarEntry")
+  (c-name "sugar_entry_set_has_clear_button")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-function table_get_type
+  (c-name "sugar_table_get_type")
+  (return-type "GType")
+)
+
+(define-function table_new
+  (c-name "sugar_table_new")
+  (is-constructor-of "SugarTable")
+  (return-type "SugarTable*")
+)
+
+(define-function table_construct
+  (c-name "sugar_table_construct")
+  (return-type "SugarTable*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_width
+  (of-object "SugarTable")
+  (c-name "sugar_table_get_width")
+  (return-type "gint")
+)
+
+(define-method set_width
+  (of-object "SugarTable")
+  (c-name "sugar_table_set_width")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-function window_get_type
+  (c-name "sugar_window_get_type")
+  (return-type "GType")
+)
+
+(define-function window_new
+  (c-name "sugar_window_new")
+  (is-constructor-of "SugarWindow")
+  (return-type "SugarWindow*")
+)
+
+(define-function window_construct
+  (c-name "sugar_window_construct")
+  (return-type "SugarWindow*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-function accelerator_ref
+  (c-name "sugar_accelerator_ref")
+  (return-type "gpointer")
+  (parameters
+    '("gpointer" "instance")
+  )
+)
+
+(define-function accelerator_unref
+  (c-name "sugar_accelerator_unref")
+  (return-type "none")
+  (parameters
+    '("gpointer" "instance")
+  )
+)
+
+(define-function param_spec_accelerator
+  (c-name "sugar_param_spec_accelerator")
+  (return-type "GParamSpec*")
+  (parameters
+    '("const-gchar*" "name")
+    '("const-gchar*" "nick")
+    '("const-gchar*" "blurb")
+    '("GType" "object_type")
+    '("GParamFlags" "flags")
+  )
+)
+
+(define-function value_set_accelerator
+  (c-name "sugar_value_set_accelerator")
+  (return-type "none")
+  (parameters
+    '("GValue*" "value")
+    '("gpointer" "v_object")
+  )
+)
+
+(define-function value_take_accelerator
+  (c-name "sugar_value_take_accelerator")
+  (return-type "none")
+  (parameters
+    '("GValue*" "value")
+    '("gpointer" "v_object")
+  )
+)
+
+(define-function value_get_accelerator
+  (c-name "sugar_value_get_accelerator")
+  (return-type "gpointer")
+  (parameters
+    '("const-GValue*" "value")
+  )
+)
+
+(define-function accelerator_get_type
+  (c-name "sugar_accelerator_get_type")
+  (return-type "GType")
+)
+
+(define-function accelerator_new
+  (c-name "sugar_accelerator_new")
+  (is-constructor-of "SugarAccelerator")
+  (return-type "SugarAccelerator*")
+  (parameters
+    '("GtkWidget*" "accel_widget")
+    '("const-char*" "signal_name")
+  )
+)
+
+(define-function accelerator_construct
+  (c-name "sugar_accelerator_construct")
+  (return-type "SugarAccelerator*")
+  (parameters
+    '("GType" "object_type")
+    '("GtkWidget*" "accel_widget")
+    '("const-char*" "signal_name")
+  )
+)
+
+(define-method get_name
+  (of-object "SugarAccelerator")
+  (c-name "sugar_accelerator_get_name")
+  (return-type "const-char*")
+)
+
+(define-method set_name
+  (of-object "SugarAccelerator")
+  (c-name "sugar_accelerator_set_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-function embedded_menu_get_type
+  (c-name "sugar_embedded_menu_get_type")
+  (return-type "GType")
+)
+
+(define-function embedded_menu_new
+  (c-name "sugar_embedded_menu_new")
+  (is-constructor-of "SugarEmbeddedMenu")
+  (return-type "SugarEmbeddedMenu*")
+  (parameters
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-function embedded_menu_construct
+  (c-name "sugar_embedded_menu_construct")
+  (return-type "SugarEmbeddedMenu*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-method insert
+  (of-object "SugarEmbeddedMenu")
+  (c-name "sugar_embedded_menu_insert")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "item")
+    '("gint" "pos" (default "-1"))
+  )
+)
+
+(define-function embedded_sub_menu_get_type
+  (c-name "sugar_embedded_sub_menu_get_type")
+  (return-type "GType")
+)
+
+(define-function embedded_sub_menu_new
+  (c-name "sugar_embedded_sub_menu_new")
+  (is-constructor-of "SugarEmbeddedSubMenu")
+  (return-type "SugarEmbeddedSubMenu*")
+  (parameters
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-function embedded_sub_menu_construct
+  (c-name "sugar_embedded_sub_menu_construct")
+  (return-type "SugarEmbeddedSubMenu*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-function _embeddedmenu_get_type
+  (c-name "sugar__embeddedmenu_get_type")
+  (return-type "GType")
+)
+
+(define-function _embeddedmenu_new
+  (c-name "sugar__embeddedmenu_new")
+  (is-constructor-of "SugarEmbeddedmenu")
+  (return-type "Sugar_EmbeddedMenu*")
+  (parameters
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-function _embeddedmenu_construct
+  (c-name "sugar__embeddedmenu_construct")
+  (return-type "Sugar_EmbeddedMenu*")
+  (parameters
+    '("GType" "object_type")
+    '("SugarConnector*" "palette_connector")
+  )
+)
+
+(define-function _embeddedmenu_embed
+  (c-name "sugar__embeddedmenu_embed")
+  (return-type "none")
+  (parameters
+    '("Sugar_EmbeddedMenu*" "self")
+    '("GtkContainer*" "container")
+  )
+)
+
+(define-method get_menu_trigger
+  (of-object "SugarMenuContainer")
+  (c-name "sugar_menu_container_get_menu_trigger")
+  (return-type "SugarTrigger*")
+)
+
+(define-function menu_item_get_type
+  (c-name "sugar_menu_item_get_type")
+  (return-type "GType")
+)
+
+(define-function menu_item_new
+  (c-name "sugar_menu_item_new")
+  (is-constructor-of "SugarMenuItem")
+  (return-type "SugarMenuItem*")
+)
+
+(define-function menu_item_construct
+  (c-name "sugar_menu_item_construct")
+  (return-type "SugarMenuItem*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_trigger
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_trigger")
+  (return-type "SugarTrigger*")
+)
+
+(define-method set_trigger
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_trigger")
+  (return-type "none")
+  (parameters
+    '("SugarTrigger*" "value")
+  )
+)
+
+(define-method get_accelerator
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_accelerator")
+  (return-type "const-char*")
+)
+
+(define-method set_accelerator
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_accelerator")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_label
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_label")
+  (return-type "const-char*")
+)
+
+(define-method set_label
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_label")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method set_label_maxlen
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_label_maxlen")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-method get_icon_name
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_icon_name")
+  (return-type "const-char*")
+)
+
+(define-method set_icon_name
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_icon_name")
+  (return-type "none")
+  (parameters
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_icon
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_icon")
+  (return-type "SugarIcon*")
+)
+
+(define-method get_tag
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_tag")
+  (return-type "GObject*")
+)
+
+(define-method set_tag
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_tag")
+  (return-type "none")
+  (parameters
+    '("GObject*" "value")
+  )
+)
+
+(define-method get_related_action
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_get_related_action")
+  (return-type "GtkAction*")
+)
+
+(define-method set_related_action
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set_related_action")
+  (return-type "none")
+  (parameters
+    '("GtkAction*" "value")
+  )
+)
+
+(define-method set__selected
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_set__selected")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method activate_item
+  (of-object "SugarMenuItem")
+  (c-name "sugar_menu_item_activate_item")
+  (return-type "none")
+)
+
+(define-function menu_get_type
+  (c-name "sugar_menu_get_type")
+  (return-type "GType")
+)
+
+(define-method insert_scrolled
+  (of-object "SugarMenu")
+  (c-name "sugar_menu_insert_scrolled")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "widget")
+    '("gint" "max_row_count")
+    '("gint" "max_height")
+    '("gint" "pos" (default "-1"))
+  )
+)
+
+(define-method insert_action
+  (of-object "SugarMenu")
+  (c-name "sugar_menu_insert_action")
+  (return-type "none")
+  (parameters
+    '("GtkAction*" "action")
+    '("GObject*" "tag" (null-ok) (default "NULL"))
+    '("gint" "pos" (default "-1"))
+  )
+)
+
+(define-method insert_separator
+  (of-object "SugarMenu")
+  (c-name "sugar_menu_insert_separator")
+  (return-type "none")
+  (parameters
+    '("gint" "pos" (default "-1"))
+  )
+)
+
+(define-function menu_new
+  (c-name "sugar_menu_new")
+  (is-constructor-of "SugarMenu")
+  (return-type "SugarMenu*")
+)
+
+(define-function menu_construct
+  (c-name "sugar_menu_construct")
+  (return-type "SugarMenu*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_width
+  (of-object "SugarMenu")
+  (c-name "sugar_menu_get_width")
+  (return-type "gint")
+)
+
+(define-method set_width
+  (of-object "SugarMenu")
+  (c-name "sugar_menu_set_width")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-function label_get_type
+  (c-name "sugar_label_get_type")
+  (return-type "GType")
+)
+
+(define-function label_new
+  (c-name "sugar_label_new")
+  (is-constructor-of "SugarLabel")
+  (return-type "SugarLabel*")
+)
+
+(define-function label_construct
+  (c-name "sugar_label_construct")
+  (return-type "SugarLabel*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_max_line_count
+  (of-object "SugarLabel")
+  (c-name "sugar_label_get_max_line_count")
+  (return-type "gint")
+)
+
+(define-method set_max_line_count
+  (of-object "SugarLabel")
+  (c-name "sugar_label_set_max_line_count")
+  (return-type "none")
+  (parameters
+    '("gint" "value")
+  )
+)
+
+(define-function alignment_get_type
+  (c-name "sugar_alignment_get_type")
+  (return-type "GType")
+)
+
+(define-function alignment_new
+  (c-name "sugar_alignment_new")
+  (is-constructor-of "SugarAlignment")
+  (return-type "SugarAlignment*")
+)
+
+(define-function alignment_construct
+  (c-name "sugar_alignment_construct")
+  (return-type "SugarAlignment*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_xalign
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_xalign")
+  (return-type "float")
+)
+
+(define-method set_xalign
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_xalign")
+  (return-type "none")
+  (parameters
+    '("float" "value")
+  )
+)
+
+(define-method get_yalign
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_yalign")
+  (return-type "float")
+)
+
+(define-method set_yalign
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_yalign")
+  (return-type "none")
+  (parameters
+    '("float" "value")
+  )
+)
+
+(define-method get_xscale
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_xscale")
+  (return-type "float")
+)
+
+(define-method set_xscale
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_xscale")
+  (return-type "none")
+  (parameters
+    '("float" "value")
+  )
+)
+
+(define-method get_yscale
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_yscale")
+  (return-type "float")
+)
+
+(define-method set_yscale
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_yscale")
+  (return-type "none")
+  (parameters
+    '("float" "value")
+  )
+)
+
+(define-method get_xignore
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_xignore")
+  (return-type "gboolean")
+)
+
+(define-method set_xignore
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_xignore")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_yignore
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_get_yignore")
+  (return-type "gboolean")
+)
+
+(define-method set_yignore
+  (of-object "SugarAlignment")
+  (c-name "sugar_alignment_set_yignore")
+  (return-type "none")
+  (parameters
+    '("gboolean" "value")
+  )
+)
+
+
+;; -*- scheme -*-
+
+;; boxed types
+
+(define-boxed Range
+  (in-module "sugar")
+  (c-name "SugarRange")
+  (gtype-id "SUGAR_TYPE_RANGE")
+  (copy-func "sugar_range_dup")
+  (release-func "sugar_range_free")
+  (fields
+    '("gint" "start")
+    '("gint" "stop")
+    '("gint" "step")
+  )
+)
+
+(define-function sugar_range_new
+  (c-name "sugar_range_new")
+  (is-constructor-of "SugarRange")
+  (return-type "SugarRange*")
+)
+
+(define-boxed IconAttr
+  (in-module "sugar")
+  (c-name "SugarIconAttr")
+  (gtype-id "SUGAR_TYPE_ICON_ATTR")
+  (copy-func "sugar_icon_attr_dup")
+  (release-func "sugar_icon_attr_free")
+  (fields
+    '("char*" "file_name")
+    '("SugarColor" "fill_color")
+    '("SugarColor" "stroke_color")
+    '("gint" "width")
+    '("gint" "height")
+  )
+)
+
+(define-function sugar_icon_attr_new
+  (c-name "sugar_icon_attr_new")
+  (is-constructor-of "SugarIconAttr")
+  (return-type "SugarIconAttr*")
+)
+
+(define-function color_to_rgb
+  (c-name "sugar_color_to_rgb")
+  (return-type "none")
+  (parameters
+    '("GdkColor*" "result")
+  )
+)
+
+;; HomogeneTable virtuals
+
+(define-virtual new_cell
+  (of-object "SugarHomogeneTable")
+  (return-type "GtkWidget*")
+)
+
+(define-virtual fill_cell
+  (of-object "SugarHomogeneTable")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "cell")
+    '("gint" "index")
+  )
+)
+
+(define-virtual highlight_cell
+  (of-object "SugarHomogeneTable")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "cell")
+    '("gboolean" "selected")
+  )
+)
