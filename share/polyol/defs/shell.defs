@@ -1,0 +1,96 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Journal
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarJournal")
+  (gtype-id "SUGAR_TYPE_JOURNAL")
+)
+
+(define-object Shell
+  (in-module "Sugar")
+  (parent "GObject")
+  (c-name "SugarShell")
+  (gtype-id "SUGAR_TYPE_SHELL")
+)
+
+;; Enumerations and flags ...
+
+
+;; From shell.h
+
+(define-function get_type
+  (c-name "sugar_shell_get_type")
+  (return-type "GType")
+)
+
+(define-method get_activity
+  (of-object "SugarShell")
+  (c-name "sugar_shell_get_activity")
+  (return-type "gboolean")
+  (parameters
+    '("const-char*" "bundle_id")
+    '("SugarActivityInfo*" "_result_")
+  )
+)
+
+(define-function new
+  (c-name "sugar_shell_new")
+  (is-constructor-of "SugarShell")
+  (return-type "SugarShell*")
+)
+
+(define-function construct
+  (c-name "sugar_shell_construct")
+  (return-type "SugarShell*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+(define-method get_active
+  (of-object "SugarShell")
+  (c-name "sugar_shell_get_active")
+  (return-type "gboolean")
+)
+
+(define-function journal_get_type
+  (c-name "sugar_journal_get_type")
+  (return-type "GType")
+)
+
+(define-method choose_object
+  (of-object "SugarJournal")
+  (c-name "sugar_journal_choose_object")
+  (return-type "none")
+  (parameters
+    '("const-char*" "what")
+  )
+)
+
+(define-method show_object
+  (of-object "SugarJournal")
+  (c-name "sugar_journal_show_object")
+  (return-type "none")
+  (parameters
+    '("const-char*" "object_id")
+  )
+)
+
+(define-function journal_new
+  (c-name "sugar_journal_new")
+  (is-constructor-of "SugarJournal")
+  (return-type "SugarJournal*")
+)
+
+(define-function journal_construct
+  (c-name "sugar_journal_construct")
+  (return-type "SugarJournal*")
+  (parameters
+    '("GType" "object_type")
+  )
+)
+
+
+;; -*- scheme -*-
+
